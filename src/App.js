@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import FanucCncM1 from "./Components/FanucCncM1";
+import Navbar from "./Components/Navbar";
+import { BrowserRouter, Route, Routes  } from 'react-router-dom'
+import FanucCncM1OEE  from "./Components/FanucCncM1OEE";
+import BreakSummery from "./Components/BreakSummery";
+import EditBreakdown from "./Components/EditBreakdown";
+import DummyOee from "./Components/DummyOee";
+// import DesignTesting from "./Components/DesignTesting";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<FanucCncM1 />} />
+      <Route path="/fanuccncoee" element={<FanucCncM1OEE />} />
+      <Route path="/breakdownsummary" element={<BreakSummery />} />
+      <Route path="/EditBreakdown/:id" element={<EditBreakdown />} />
+      <Route path="/DummyOee" element={<DummyOee />} />
+      {/* <Route path="/designtesting" element={<DesignTesting />} /> */}
+    </Routes>
+    </BrowserRouter>
+
   );
 }
 

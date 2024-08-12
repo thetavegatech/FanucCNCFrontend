@@ -1,0 +1,16 @@
+.container-fluid {
+    background-color: #1c1c1c; /* Dark background */
+  }
+  
+  .card {
+    background-color: #2d2d2d; /* Slightly lighter dark background */
+  }
+  
+  .progress-bar {
+    height: 20px;
+  }
+  
+  .text-white {
+    color: #ffffff !important;
+  }
+  
